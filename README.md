@@ -1,4 +1,2 @@
-# Blue-Web-Utilities-PHP
-Functions to speed up your web development using php
-
-![logo](others\logo.png) 
+# Math-PHP
+Math functions to speed up your web development using php
