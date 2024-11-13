@@ -31,15 +31,18 @@ class Mathematics
     /**
      * Euclides Algorithm
      */
-    public function MDC(int $i1 = 0, int $i2 = 0): int
+    public function GCD(int $i1 = 0, int $i2 = 0): int
     {
-        $maior = ($i1 >= $i2) ? $i1 : $i2;
-        $menor = ($i2 >= $i1) ? $i2 : $i1;
+        $a = ($i1 >= $i2) ? $i1 : $i2; #largest number 
+        $b = ($i2 >= $i1) ? $i2 : $i1; #smallest number
 
         $r = null;
         while($r != 0){
-
+            $r = $a % $b;
+            $a = $r;
         }
+
+        return $a;
     }
 
     public function MMC(array $numbers = [1]): int
@@ -49,11 +52,11 @@ class Mathematics
         
         while($resto != 0){
             foreach($numbers as $number){
-                $resultado = $number % $mmc
+                $resultado = $number % $mmc;
             }
         }
 
-        return 0
+        return 0;
     }
 }
 ?>
