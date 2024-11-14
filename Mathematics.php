@@ -45,18 +45,19 @@ class Mathematics
         return $a;
     }
 
-    public function MMC(array $numbers = [1]): int
+    public function MMC(array $numbers): int
     {
-        $mmc = 2;
-        $resto = 0.1;
-        
-        while($resto != 0){
-            foreach($numbers as $number){
-                $resultado = $number % $mmc;
-            }
-        }
+        $i = count($numbers);
+
+        while($i != 1){
+            $i++;
+        };
 
         return 0;
+    }
+
+    public function POW($number, $pow){
+    
     }
 }
 ?>
