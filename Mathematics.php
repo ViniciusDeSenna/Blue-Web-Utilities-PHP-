@@ -31,7 +31,7 @@ class Mathematics
     /**
      * Euclides Algorithm
      */
-    public function GCD(int $i1 = 0, int $i2 = 0): int
+    public function MDC(int $i1, int $i2): int
     {
         $a = ($i1 >= $i2) ? $i1 : $i2; #largest number 
         $b = ($i2 >= $i1) ? $i2 : $i1; #smallest number
@@ -50,14 +50,18 @@ class Mathematics
         $i = count($numbers);
 
         while($i != 1){
-            $i++;
+            $i = count($numbers);
+            $mdc = $this->MDC($numbers[0], $numbers[1]);
+            unset($numeros[0]);
+            unset($numeros[1]);
+            array_unshift($numeros, $mdc);
         };
 
         return 0;
     }
 
-    public function POW($number, $pow){
+    // public function POW($number, $pow){
     
-    }
+    // }
 }
 ?>
