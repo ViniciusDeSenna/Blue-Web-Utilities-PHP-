@@ -1,12 +1,11 @@
 <?php
 class Mathematics
 {
-    function  __construct()
-    {
-        
+    public static function test(){
+        return 'teste';
     }
-
-    public function directlyProportional(array $prop = [0], float $value = 0): array
+    
+    public static function directlyProportional(array $prop = [0], float $value = 0): array
     {
         $propValue = array_sum($prop);
         $constantOfProportionality = $value / $propValue;
@@ -17,7 +16,7 @@ class Mathematics
         return $return;
     }
 
-    public function inverselyProportional(array $prop = [0], float $value = 0)
+    public static function inverselyProportional(array $prop = [0], float $value = 0)
     {
         // $propValue = array_sum($prop);
         // $constantOfProportionality = $value / $propValue;
@@ -31,7 +30,7 @@ class Mathematics
     /**
      * Euclides Algorithm
      */
-    public function MDC(int $i1, int $i2): int
+    public static function MDC(int $i1, int $i2): int
     {
         $a = ($i1 >= $i2) ? $i1 : $i2; #largest number 
         $b = ($i2 >= $i1) ? $i2 : $i1; #smallest number
@@ -45,19 +44,19 @@ class Mathematics
         return $a;
     }
 
-    public function MMC(array $numbers): int
+    public static function MMC(array $numbers): int
     {
         $i = count($numbers);
 
         while($i != 1){
             $i = count($numbers);
-            $mdc = $this->MDC($numbers[0], $numbers[1]);
-            unset($numeros[0]);
-            unset($numeros[1]);
-            array_unshift($numeros, $mdc);
+            $mdc = self::MDC($numbers[0], $numbers[1]);
+            unset($numbers[0]);
+            unset($numbers[1]);
+            array_unshift($numbers, $mdc);
         };
 
-        return 0;
+        return $numbers[0];
     }
 
     // public function POW($number, $pow){
